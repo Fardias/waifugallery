@@ -5,13 +5,11 @@ function fetchWaifus(limit) {
   document.getElementById("loading").classList.remove("hidden")
 
   const selectedTag = document.getElementById("tag-selector").value // Ambil nilai dari dropdown
-  const gif = document.getElementById("gif-toggle").checked // Ambil nilai dari toggle gif
   const isNsfw = document.getElementById("nsfw-toggle").checked // Ambil nilai dari toggle is_nsfw
   const orientation = document.getElementById("orientation-selector").value // Ambil nilai dari dropdown orientation
 
   const params = new URLSearchParams({
     included_tags: selectedTag,
-    gif: gif,
     is_nsfw: isNsfw ? isNsfw : false,
     orientation: orientation,
     limit,
