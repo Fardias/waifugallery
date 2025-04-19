@@ -6,28 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waifu Gallery</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- stylesheet -->
     <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
-
-    <!-- script -->
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
 </head>
 
-<body class="min-h-screen bg-gray-100 flex items-center justify-center p-4 flex flex-col">
-    <div class="container rounded-lg shadow-md border-2 p-4 ">
-        <!-- Dropdown untuk memilih included_tags -->
+<body class="min-h-screen bg-pink-100 flex items-center justify-center p-4 flex-col">
+    <div class="container mx-auto rounded-lg shadow-md border-2 border-pink-500 p-4 max-w-3xl bg-pink-50 ">
         <div class="">
-            <h1 class="text-2xl uppercase font-bold mb-5 text-center">Waifu Gallery</h1>
-            <div class=" w-fit-content">
+            <h1 class="text-2xl uppercase font-bold mb-5 text-center text-pink-800">Waifu Gallery</h1>
+            <div class="w-fit-content">
                 <div>
                     <form class="max-w-sm mx-auto">
                         <select id="tag-selector"
-                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl  focus:outline-none  dark:focus:ring-cyan-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected="waifu">Waifu</option>
+                            class="bg-pink-300 focus:outline-none text-sm rounded-lg focus:ring-pink-500 focus:border-pink-500 block w-full p-2 text-pink-900">
+                            <option selected value="waifu">Waifu</option>
                             <option value="maid">Maid</option>
                             <option value="marin-kitagawa">Marin Kitagawa</option>
                             <option value="mori-calliope">Mori Calliope</option>
@@ -38,17 +31,13 @@
                             <option value="kamisato-ayaka">Kamisato Ayaka</option>
                         </select>
                     </form>
-
-
-
                 </div>
 
                 <div class="mt-5 flex gap-5">
-
                     <div class="inline-flex items-center">
                         <label class="flex items-center cursor-pointer relative" for="gif-toggle">
                             <input type="checkbox"
-                                class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-blue-300 checked:bg-blue-800 checked:border-blue-800"
+                                class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-pink-400 checked:bg-pink-600 checked:border-pink-600"
                                 id="gif-toggle" />
                             <span
                                 class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -60,39 +49,15 @@
                                 </svg>
                             </span>
                         </label>
-                        <label class="cursor-pointer ml-2 text-black-600 text-sm" for="gif-toggle">
+                        <label class="cursor-pointer ml-2 text-pink-800 text-sm" for="gif-toggle">
                             Include GIFs
                         </label>
                     </div>
 
-
-                    <!-- no disable -->
-                    <!-- <div class="inline-flex items-center">
-                        <label class="flex items-center cursor-pointer relative" for="nsfw-toggle">
-                          <input type="checkbox"
-                          disabled
-                            class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-blue-300 checked:bg-blue-800 checked:border-blue-800"
-                            id="nsfw-toggle" />
-                          <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
-                              stroke="currentColor" stroke-width="1">
-                              <path fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"></path>
-                            </svg>
-                          </span>
-                        </label>
-                        <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="nsfw-toggle">
-                          NSFW
-                        </label>
-                      </div> -->
-
-
-                    <!-- disabled nsfw -->
                     <div class="inline-flex items-center pointer-events-none">
                         <label class="flex items-center cursor-pointer relative" for="nsfw-toggle">
                             <input type="checkbox" disabled
-                                class="peer h-5 w-5 cursor-pointer transition-all disabled:opacity-50 appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                class="peer h-5 w-5 cursor-pointer transition-all disabled:opacity-50 appearance-none rounded shadow hover:shadow-md border border-pink-300 checked:bg-pink-800 checked:border-pink-800"
                                 id="nsfw-toggle" />
                             <span
                                 class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -104,21 +69,17 @@
                                 </svg>
                             </span>
                         </label>
-                        <label class="cursor-pointer ml-2 text-slate-600 text-sm opacity-50" for="nsfw-toggle">
+                        <label class="cursor-pointer ml-2 text-pink-400 text-sm opacity-50" for="nsfw-toggle">
                             NSFW
                         </label>
                     </div>
-
-
-
                 </div>
 
-                <!-- Dropdown untuk orientation -->
-                <div class=" mt-5 flex gap-2  items-center">
-                    <p>Pilih orientasi:</p>
-                    <form class="bg-blue-200">
+                <div class="mt-5 flex gap-2 items-center">
+                    <p class="text-pink-700">Pilih orientasi:</p>
+                    <form>
                         <select required id="orientation-selector"
-                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl  focus:outline-none  dark:focus:ring-cyan-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            class="bg-pink-300 hover:bg-pink-400 focus:outline-none text-sm rounded-lg focus:ring-pink-500 focus:border-pink-500 block w-full p-2 text-pink-900">
                             <option value="portrait">Portrait</option>
                             <option value="landscape">Landscape</option>
                         </select>
@@ -126,31 +87,20 @@
                 </div>
             </div>
 
-
-
-
             <button type="button"
-                class="text-white mt-5 buttonFetch bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-full"
-                onclick="fetchWaifus()">Tampilkan Waifu</button>
-            <div id="loading" class="loader hidden"></div> <!-- Loader -->
-            <div id="waifu-container"></div>
-        </div>
+                class="text-white mt-5 buttonFetch bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-full"
+                onclick="fetchWaifus(10)">Tampilkan Waifu</button>
+            <div id="loading" class="loader hidden"></div>
+            <div id="waifu-container-header">
+                <div id="waifu-container"></div>
+                <div id="waifu-footer" class="w-full text-center"></div>
+            </div>
 
-        
+            <div id="pagination" class="flex justify-center mt-5 gap-2"></div>
+        </div>
     </div>
 
-    <div class="mt-[20px]">
-        <div role="alert" class="mb-4 relative flex w-full p-3 text-sm text-white bg-yellow-500 rounded-md">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
-            untuk sementara, website hanya fokus pada tampilan layar hp
-           
-        </div>
-     
-    </div>
-
-    <script src="index.js">
-
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
